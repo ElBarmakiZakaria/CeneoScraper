@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import json
 
 
-# product_code = input("Please enter the product code: ")
-product_code = "129910940"
+product_code = input("Please enter the product code: ")
+#product_code = "129910940"
 print(product_code)
 
 url = f"https://www.ceneo.pl/{product_code}#tab=reviews"
