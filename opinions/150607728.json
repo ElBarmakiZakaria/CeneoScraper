@@ -1,0 +1,57 @@
+[
+    {
+        "opinion_id": "17407543",
+        "author": [
+            "Maja"
+        ],
+        "recommendation": "Polecam",
+        "score": "4,5/5",
+        "description": "Użytkuję telefon od 2 miesięcy i działa bardzo dobrze. Bateria super przy włączonym cały dzień LTE i korzystaniu z social media i przeglądaniu internetu na koniec dnia mam jeszcze 60 %. Przy przeglądaniu social media wszystko działa płynnie chociaż zdarzają się przycięcia przy scrolowaniu stron potrzebuje kilka sekund żeby załadować stronę. Jest to jednak drobnostka.",
+        "pros": [
+            "czas pracy na baterii",
+            "funkcjonalność",
+            "łatwość obsługi",
+            "wygląd"
+        ],
+        "cons": [],
+        "like": "0",
+        "dislike": "1",
+        "publish_date": "2 dni temu",
+        "purchase_date": "None"
+    },
+    {
+        "opinion_id": "17408011",
+        "author": [
+            "Dawid"
+        ],
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "description": "Wszystko ok, za 1500 zł super",
+        "pros": [],
+        "cons": [],
+        "like": "0",
+        "dislike": "0",
+        "publish_date": "2 dni temu,",
+        "purchase_date": "po 4 dniach"
+    },
+    {
+        "opinion_id": "17388455",
+        "author": [
+            "t...n"
+        ],
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "description": "Super!)",
+        "pros": [
+            "czas pracy na baterii",
+            "funkcjonalność",
+            "łatwość obsługi",
+            "wygląd"
+        ],
+        "cons": [],
+        "like": "0",
+        "dislike": "0",
+        "publish_date": "6 dni temu,",
+        "purchase_date": "po 3 tygodniach"
+    }
+]
