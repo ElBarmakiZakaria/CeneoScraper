@@ -1,28 +1,27 @@
-import requests
-from bs4 import BeautifulSoup
-import numpy as np
-import json
 import os
+from bs4 import BeautifulSoup
+import json
+import requests
+import numpy as np
 from translate import Translator
 
 
-#product_code = input("Please enter the product code: ")
+# product_code = input("Please enter the product code: ")
 product_code = "26362090"
 # product_code = "112905096"
-print(product_code)
+# print(product_code)
 
 url = f"https://www.ceneo.pl/{product_code}#tab=reviews"
 
 
 #def get(dom, sel):
 #    return dom.select_one(sel)
-
 #def get_stripped_element_checked(dom, sel):
 #    el = get_element(dom, sel)
 #    return el.text.strip() if el else None
-
 #def get_stripped_element(dom, sel):
 #    return get_element(dom, sel).text.strip()
+
 
 def get_element(dom, sel = None, attribute = None, return_list= False):
     try:
@@ -67,6 +66,10 @@ to_lang = "en"
 translator = Translator(to_lang, from_lang)
 
 
+headers = {
+
+}
+
 while url:
     response = requests.get(url)
 
@@ -81,24 +84,18 @@ while url:
             for opinion in opinions:
                 # opinion_id = opinion["data-entry-id"]
                 # author = get_element(opinion, "span.user-post__author-name")
-                
                 # recommendation = get_element(opinion, "span.user-post__author-recomendation > em")
-                
-                
                 # score = get_element(opinion, "span.user-post__score-count")
                 # description = get_element(opinion, "div.user-post__text")
-            
                 # pros = get_element(opinion, "div.review-feature__col:has( > div.review-feature__title--positives)> div.review-feature__item", return_list=True)
                 # cons = get_element(opinion, "div.review-feature__col:has( > div.review-feature__title--negatives)> div.review-feature__item", return_list=True)
-
                 # like = get_element(opinion, "span[id^=votes-yes]")
-
                 # dislike = get_element(opinion, "span[id^=votes-no]")
-
-                # publish_date = get_element(opinion, "span.user-post__published > time:nth-child(1)", "datetime")
-              
+                # publish_date = get_element(opinion, "span.user-post__published > time:nth-child(1)", "datetime")              
                 # purchase_date = get_element(opinion, "span.user-post__published > time:nth-child(2)", "datetime")
                 
+
+
                 single_opinion = {}
                 for key, value in selectors.items():
                     single_opinion[key] = get_element(opinion, *value)
@@ -108,9 +105,9 @@ while url:
                 single_opinion["like"] = int(single_opinion["like"])
                 single_opinion["dislike"] = int(single_opinion["dislike"])
                 single_opinion["description"] = clear_text(single_opinion["description"])
-                single_opinion["description_en"] = translator.translate(single_opinion["description"][0:500])
-                single_opinion["pros_en"] = translator.translate(single_opinion["pros"])
-                single_opinion["cons_en"] = translator.translate(single_opinion["cons"])
+                single_opinion["description_en"] = translator.translate(single_opinion["description"][:500])
+                single_opinion["pros_en"] = translator.translate(single_opinion["pros"][:500])
+                single_opinion["cons_en"] = translator.translate(single_opinion["cons"][:500])
 
                 
 
