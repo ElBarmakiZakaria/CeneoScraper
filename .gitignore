@@ -133,3 +133,7 @@ reviews
 
 # VSCode local settings
 .vscode
+
+# result
+/opinions
+/charts
