@@ -135,5 +135,5 @@ reviews
 .vscode
 
 # result
-/opinions
-/charts
+./opinions
+./charts
